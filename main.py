@@ -1,3 +1,4 @@
+from usuarios import acciones
 
 if __name__ == "__main__":
     print("""
@@ -7,15 +8,9 @@ if __name__ == "__main__":
     """)
 
     accion = int(input('que quieres hacer: '))
+    haz_el = acciones.Acciones()
 
     if accion == 1:
-        print("Ok, vamos a resitararnos en el sistemas")
-        nombre = input('cual es tu nombre?: ')
-        apellidos = input('cuales osn tus apellidos?: ')
-        email = input('cual es tu email?: ')
-        password = input('ingresa tu contraseña: ')
-
+        haz_el.Registro()
     elif accion == 2:
-        print("Ok, vamos a iniciar seccion")
-        email = input('cual es tu email?: ')
-        password = input('cual es tu contraseña: ')
+        haz_el.Login()
