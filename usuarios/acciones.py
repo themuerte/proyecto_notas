@@ -3,12 +3,12 @@ class Acciones:
     
     def Registro(self):
         print("Ok, vamos a resitararnos en el sistemas")
-    
+        print()
         nombre = input('cual es tu nombre?: ')
-        apellidos = input('cuales osn tus apellidos?: ')
+        apellidos = input('cual es tu apellido?: ')
         email = input('cual es tu email?: ')
         password = input('ingresa tu contraseña: ')
-
+        
         usuario = modelo.Usuarios(nombre, apellidos, email, password)
         registro = usuario.Registrar()
 
