@@ -1,6 +1,7 @@
 import datetime
 import hashlib
-import usuarios.conexion as conexion
+import Usuarios.conexion as conexion
+
 
 conex = conexion.connector()
 database = conex[0]
@@ -34,7 +35,7 @@ class Usuarios:
         return result
     
     def Identificar(self):
-        sql = "select * from usurios where email = %s and password = %s"
+        sql = "select * from usuarios where email='%s' and password='%s';"
         
         #cifrado de contraseña
         cifrado = hashlib.sha256()
