@@ -13,9 +13,9 @@ class Acciones:
         registro = usuario.Registrar()
 
         if registro[0] >= 1:
-            print(f"Perfecto {registro[1].nombre} te has rgsitrado correctamente")
+            print(f"Perfecto {registro[1].nombre} te has registrado correctamente")
         else:
-            print(f"{registro[1].nombre}NO te has rgsitrado correctamente")
+            print(f"{registro[1].nombre} NO te has registrado")
 
     def Login(self):
         print("Ok, vamos a iniciar seccion")
