@@ -8,6 +8,7 @@ class Acciones:
         apellidos = input('cual es tu apellido?: ')
         email = input('cual es tu email?: ')
         password = input('ingresa tu contraseña: ')
+        print()
         
         usuario = modelo.Usuarios(nombre, apellidos, email, password)
         registro = usuario.Registrar()

@@ -6,10 +6,9 @@ if __name__ == "__main__":
         1 - Registro
         2 - Login
     """)
-    try:
-        accion = int(input('que quieres hacer: '))
-    except ValueError as e:
-        print('Intente de nuevo pero asegurese que introduce uin numero')
+    
+    accion = int(input('que quieres hacer: '))
+    print('Intente de nuevo pero asegurese que introduce uin numero')
     
     haz_el = acciones.Acciones()
 
