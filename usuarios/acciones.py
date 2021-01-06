@@ -24,3 +24,9 @@ class Acciones:
         email = input('cual es tu email?: ')
         password = input('cual es tu contraseña: ')
 
+        usurio = modelo.Usuarios('', '', email, password)
+        login = usurio.Identificar()
+
+        if email == login[3]:
+            print(f"Bienvenido {login[1]}, te has regitrado {login[5]}")
+
