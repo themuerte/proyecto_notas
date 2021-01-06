@@ -1,16 +1,10 @@
-import mysql.connector
 import datetime
+import hashlib
+import usuarios.conexion as conexion
 
-database = mysql.connector.connect(
-    host = 'localhost',
-    user = 'root',
-    passwd = 'Qwsxzaqwedc1!',
-    database = 'master_python',
-    port = 3306
-
-)
-
-cursor = database.cursor(buffered=True)
+conex = conexion.connector()
+database = conex[0]
+cursor = conex[1]
 
 class Usuarios:
 
@@ -21,9 +15,14 @@ class Usuarios:
         self.password = password
 
     def Registrar(self):
+        
+        #cifrado de contraseña
+        cifrado = hashlib.sha256()
+        cifrado.update(self.password.encode('utf8'))
+        
         fecha = datetime.datetime.now()
         sql = "insert into usuarios values(null, %s, %s, %s, %s, %s)"
-        usuario = (self.nombre, self.apellidos, self. email, self.password, fecha)
+        usuario = (self.nombre, self.apellidos, self. email, cifrado.hexdigest(), fecha)
 
         try:
             cursor.execute(sql, usuario)
