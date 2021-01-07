@@ -5,8 +5,8 @@ def connector():
     host = 'localhost',
     user = 'root',
     passwd = 'Qwsxzaqwedc1!',
-    database = 'master_python',
-    port = 3306
+    database = 'master_python'
+
 
     )
 

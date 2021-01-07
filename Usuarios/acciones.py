@@ -1,4 +1,5 @@
-import usuarios.usuarios as modelo
+import Usuarios.usuarios as modelo
+
 class Acciones:
     
     def Registro(self):
@@ -21,6 +22,21 @@ class Acciones:
     def Login(self):
         print("Ok, vamos a iniciar seccion")
         
-        email = input('cual es tu email?: ')
-        password = input('cual es tu contraseña: ')
+        try:
+            email = input('cual es tu email?: ')
+            password = input('cual es tu contraseña: ')
+
+            usurio = modelo.Usuarios('', '', email, password)
+            login = usurio.Identificar()
+            print(login)
+
+            if email == login[3]:
+                print(f"Bienvenido {login[1]}, te has regitrado {login[5]}")
+        except Exception as e:
+            print(type(e))
+            print(type(e).__name__)
+            print(f"login incorrecto")
+    
+    def aproximizaciones(self, usuario):
+        pass:
 
