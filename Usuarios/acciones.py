@@ -36,3 +36,7 @@ class Acciones:
             print(type(e))
             print(type(e).__name__)
             print(f"login incorrecto")
+    
+    def aproximizaciones(self, usuario):
+        pass:
+
