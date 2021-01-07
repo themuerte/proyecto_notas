@@ -21,22 +21,47 @@ class Acciones:
 
     def Login(self):
         print("Ok, vamos a iniciar seccion")
-        
+        print()
+
         try:
             email = input('cual es tu email?: ')
             password = input('cual es tu contraseña: ')
+            print()
 
             usurio = modelo.Usuarios('', '', email, password)
             login = usurio.Identificar()
-            print(login)
+            
 
             if email == login[3]:
                 print(f"Bienvenido {login[1]}, te has regitrado {login[5]}")
+                self.aproximizaciones(login)
+        
         except Exception as e:
             print(type(e))
             print(type(e).__name__)
             print(f"login incorrecto")
     
-    #def aproximizaciones(self, usuario):
+    def aproximizaciones(self, usuario):
+ 
+        print("""
+        Acciones disponibles:
+        1 - Crear notas
+        2 - Mostrar notas
+        3 - Eliminar notas 
+        99 - Salir
+        """)
+
+        accion = int(input('que quieres hacer?: '))
+
+        if accion == 1:
+            print('Crear notas')
+        elif accion == 2:
+            print('Mostrar notas')
+        elif accion == 3:
+            print('Eliminar notas')
         
+        elif accion == 99:
+            exit()
+
+        return None 
 
