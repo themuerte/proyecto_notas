@@ -28,6 +28,7 @@ class Acciones:
 
             usurio = modelo.Usuarios('', '', email, password)
             login = usurio.Identificar()
+            print(login)
 
             if email == login[3]:
                 print(f"Bienvenido {login[1]}, te has regitrado {login[5]}")
