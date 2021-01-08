@@ -8,7 +8,6 @@ if __name__ == "__main__":
     """)
     
     accion = int(input('que quieres hacer: '))
-    print('Intente de nuevo pero asegurese que introduce uin numero')
     
     haz_el = acciones.Acciones()
 
