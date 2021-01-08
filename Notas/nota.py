@@ -44,7 +44,7 @@ class Nota:
             database.commit()
             result = [cursor.rowcount, self]
         except:
-            result = [0, self]
+            print("F")
 
         return result
 
