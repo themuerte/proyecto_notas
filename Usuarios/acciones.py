@@ -62,10 +62,12 @@ class Acciones:
 
         elif accion == 2:
             print('Mostrar notas')
+            haz.Mostrar(usuario)
             self.aproximizaciones(usuario)
 
         elif accion == 3:
             print('Eliminar notas')
+            haz.Eliminar(usuario)
             self.aproximizaciones(usuario)
             
         elif accion == 99:
