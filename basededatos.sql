@@ -23,3 +23,11 @@ create table notas(
     fecha date not null
 
 )ENGINE=InnoDb;
+
+SELECT * FROM usuarios;
+
+select * from notas;
+
+SELECT * FROM notas WHERE id_usuarios = 9
+
+
