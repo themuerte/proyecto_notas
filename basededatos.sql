@@ -26,3 +26,4 @@ create table notas(
 
 SELECT * FROM usuarios;
 
+select * from notas;

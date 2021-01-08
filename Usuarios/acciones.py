@@ -1,4 +1,5 @@
 import Usuarios.usuarios as modelo
+from Notas import acciones
 
 class Acciones:
     
@@ -52,14 +53,21 @@ class Acciones:
         """)
 
         accion = int(input('que quieres hacer?: '))
+        haz = acciones.Acciones()
 
         if accion == 1:
             print('Crear notas')
+            haz.crear(usuario)
+            self.aproximizaciones(usuario)
+
         elif accion == 2:
             print('Mostrar notas')
+            self.aproximizaciones(usuario)
+
         elif accion == 3:
             print('Eliminar notas')
-        
+            self.aproximizaciones(usuario)
+            
         elif accion == 99:
             exit()
 
